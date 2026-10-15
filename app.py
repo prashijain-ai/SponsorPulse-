@@ -12,7 +12,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-# Optional Sentry SDK integration for the $100 Sentry Category Prize
 try:
     import sentry_sdk
     SENTRY_DSN = os.getenv("SENTRY_DSN", "")
@@ -21,7 +20,6 @@ try:
 except ImportError:
     sentry_sdk = None
 
-# Try loading TabPFN (Prior Labs $200 Category Prize)
 TABPFN_AVAILABLE = False
 try:
     from tabpfn import TabPFNRegressor
